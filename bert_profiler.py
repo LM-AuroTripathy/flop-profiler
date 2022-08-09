@@ -37,7 +37,7 @@ for model_name in model_names:
               detailed=False,
               warm_up=10,
           )
-          print(f'flops:{flops}, macs:{macs}, params:{params}')
+          print(f'Model name: {model_name} flops:{flops}, macs:{macs}, params:{params}')
         else:
           inputs = bert_input_constructor((batch_size, seq_len), tokenizer)
           outputs = model(inputs)
